@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="API.css">
+</head>
+<body>
+    <h1>DOM API</h1>
+    <p>
+        This is the (Document Object Model ) API in Javascript.<br>
+        It provides a way to interact with and manipulate HTML and XML documents.<br>
+        It represents the structure of a document as a tree of nodes, where each node corresponds to a part of the document
+         (like elements, attributes, and text)
+         Using the DOM API, you can modify the structure, style, and content of a webpage dynamically.
+         
+    </p>
+    <p>
+        <ol>
+            <li>
+                <h>Document Object</h>
+                <p>
+                    The document object is the entry point 
+                   to the DOM. It represents the entire web page and allows access to its elements.<br>
+                    <span >
+                        // Example: Accessing the document title
+                        console.log(document.title); // Logs the title of the page
+                        </span>
+                </p> 
+            </li>'
+            
+            <li>
+                <h>Selecting Elements:</h>
+                <p>You can select elements from the DOM using various methods:
+                    <ul>
+                    <li>getElementById(): Selects an element by its id.</li>
+                    <li>getElementsByClassName(): Selects elements by their class name.</li>
+                    <li>getElementsByTagName(): Selects elements by their tag name.</li>
+                    <li>querySelector(): Selects the first element that matches a CSS selector.</li>
+                    <li>querySelectorAll(): Selects all elements that match a CSS selector.</li>
+                </ul>
+                    <span>
+                        // Example: Selecting an element by its ID
+                        const header = document.getElementById('header');
+
+                        // Example: Selecting all elements with a class name
+                        const items = document.getElementsByClassName('item');
+
+                        // Example: Selecting an element using a CSS selector
+                        const firstItem = document.querySelector('.item');
+
+                    </span>
+                    
+                </p>
+            </li>
+
+
+            <li>
+                <h>Manipulating Elements: </h>
+                <p>You can modify the content, attributes, and styles of elements.<br>
+                    <ul>
+                        <li>Content: You can change the content of elements
+                             using innerHTML, textContent, and other properties.</li>
+                        <li>Attributes: Methods like setAttribute(), getAttribute(),
+                             removeAttribute() are used to manipulate element attributes.</li>
+                        <li>Styles: You can modify inline styles using the style property</li>
+                                                
+                    </ul>
+                    <span>
+                        // Example: Changing the content of an element
+                        header.innerHTML = "New Title";
+
+                        // Example: Changing an attribute
+                        firstItem.setAttribute('data-value', '123');
+
+                        // Example: Modifying styles    
+                        firstItem.style.color = 'red';
+
+                    </span>
+                    
+
+                </p>
+            </li>
+
+
+            <li>
+                <h>Creating and Appending Elements: </h>
+                <p>
+                     You can create new elements and insert them into the DOM
+                     using methods like createElement() and appendChild().
+                     <span>
+                        // Example: Creating and appending a new element
+                        const newItem = document.createElement('li');
+                        newItem.textContent = 'New List Item';
+                        document.querySelector('ul').appendChild(newItem);
+                         
+                     </span>
+                </p>
+            </li>
+            <li>
+                <h>Event Handling:</h>
+                <p>You can attach event listeners to elements to respond to user interactions, like clicks,
+                     keypresses, etc. The most common method is addEventListener().
+                     <span>
+                        // Example: Adding an event listener
+                        firstItem.addEventListener('click', () => {
+                         alert('Item clicked!');
+                            });
+
+                     </span>
+                </p>
+            </li>
+            <li>
+                <h>Traversal and Manipulation:</h>
+                <p>
+                    The DOM API provides ways to traverse through the document tree, allowing you to move between parent, child, sibling nodes.
+                    <ul>
+                        <li>
+                            parentNode, childNodes, firstChild, lastChild, nextSibling, and previousSibling
+                             are some properties for traversal.
+                        </li>
+                        <span>
+                            // Example: Traversing to the parent node
+                            console.log(firstItem.parentNode);
+
+                            // Example: Traversing to the next sibling
+                            console.log(firstItem.nextSibling);
+
+                        </span>
+                    </ul>
+
+                </p>
+            </li>
+        </ol>
+    </p>
+
+
+</body>
+</html>

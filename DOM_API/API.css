@@ -1,0 +1,23 @@
+body{
+    background-color: rgb(109, 110, 179);
+}
+ul{
+    list-style:circle ;
+}
+span{
+    font-style:oblique ;
+    color: bisque;
+    
+
+}
+h{
+    font-weight: bold;
+}
+
+h1{
+    text-align: center;
+    color: cyan;
+    text-decoration: underline;
+    
+}
+ 
